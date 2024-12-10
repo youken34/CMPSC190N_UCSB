@@ -1,0 +1,69 @@
+\section{Evaluation}
+\label{sec:eval}
+Below is a good checklist for evaluation.
+\begin{itemize}
+    \item Appropriate figures of merit to evaluate the work are identified and motivated.
+    \item Figures of merit are measured given a comprehensive range of practical parameters / operating conditions.
+    \item Experimental setup is described sufficiently for a reader to replicate the testbed.
+    \item Conclusions about the core insight of the paper make sense and draw cleanly from the experimental data.
+    \item Design decisions are evaluated independently; role of each design choice is backed up with experimental data.
+\end{itemize}
+
+In the preamble of your evaluation section, provide a summary of questions that you aim to answer and preview of key results. The first sub-section of evaluation typically describes the setup, which includes description of dataset(s), testbed(s), tools, etc. I highly recommend WALTERing your graphs. 
+\begin{itemize}
+    \item \textbf{W}hy: why are we looking at this graph
+    \item \textbf{A}xes: clearly describe the two axes and measurement units for each
+    \item \textbf{L}ines: clearly describe what different lines/shapes represent in the graph
+    \item \textbf{T}rends: What clear trends are visible in the graph, what's the implication
+    \item \textbf{E}xceptions: clarify if there are some exceptions to the expected trend, explain why
+    \item \textbf{R}ecap: provide a takeaway message and try to connect this with the motivation (part of Why).  Are the results as expected? What did we learn from it this experiment?
+\end{itemize}
+
+As a rule of thumb, there should only be one main takeaway from a graph. 
+
+
+
+
+
+\begin{table}[t]
+\begin{footnotesize}
+\begin{center}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l| c c  c|}
+\hline
+\textbf{} & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Is\\ Realizable\end{tabular}} &
+\textbf{\begin{tabular}[c]{@{}c@{}}Query\\ Planning\end{tabular}} &
+\textbf{\begin{tabular}[c]{@{}c@{}}Stream Processor\\ Load\end{tabular}} 
+\\
+
+Static-MW  & \cmark & Static & 39.7~M \\ 
+\hline
+\system-Oracle & \xmark & Dynamic & 37.1~K \\
+\system-Pred & \cmark & Dynamic & \textbf{39.6~K} \\
+\hline
+Optimal-Sonata & \xmark & Dynamic & 21.9~K 
+\\ 
+\hline
+\end{tabular}
+}
+\end{center}
+\end{footnotesize}
+% \caption{Query-planning techniques emulated for evaluation.}
+\caption{Sample table~\cite{sonata}.
+% \ag{TODO: remove refinement column, update the load column.}
+}
+\label{tab:query_plans} 
+\vspace{-.35in}
+\end{table}
+
+
+
+\begin{figure}[t] 
+\begin{minipage}{1\linewidth}
+\includegraphics[width=.9\linewidth]{1a.pdf}
+\end{minipage}
+\caption{Sample figure (results).
+\label{fig:cost_of_not_adapting}
+}
+\end{figure}

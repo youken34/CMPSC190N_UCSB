@@ -1,0 +1,125 @@
+\documentclass[10pt,twocolumn]{confpaper}
+
+%%%%%%%%%%%%%%%%%%%%  INCLUDES  %%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx} 
+\usepackage{caption,subcaption}
+% \usepackage[showframe]{geometry}
+% \definecolor{darkgreen}{rgb}{0.0, 0.65, 0.0}
+
+\ifthenelse{\equal{\COMMENTS}{no}}{%
+\newcommand{\ag}[1]{\textit{\textcolor{blue}{[arpit]: #1}}} % Arpit's comments
+
+}{
+\newcommand{\ag}[1]{}
+
+}
+
+\newcommand{\supsym}[1]{\raisebox{4pt}{{\footnotesize #1}}}
+\newcommand{\et}{\supsym{$\dag$}}
+\newcommand{\ucl}{\supsym{$\diamond$}}
+\newcommand{\ptn}{\supsym{$\star$}}
+\newcommand{\ceq}{\supsym{$\ddag$}}
+
+
+\usepackage{listing}
+
+
+
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage[linesnumbered, ruled, vlined]{algorithm2e}
+\usepackage{fancybox}
+\usepackage{pseudocode}
+\usepackage{algpseudocode}
+\usepackage{booktabs} % For formal tables
+\usepackage{outlines}
+\usepackage{listings} 
+\usepackage{tabularx}
+\usepackage{colortbl, graphicx}
+\usepackage{subcaption}
+\usepackage{balance}
+\usepackage{paralist}
+\usepackage{tcolorbox}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+
+%%%%%%%%%%%%%%%%%%%%  LOCALS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% System name macro
+\newcommand{\system}{Sonata\xspace}
+
+%%%%%%%%%%%%%%%%%%%%  TITLE/AUTHORS  %%%%%%%%%%%%%%%%%%%%%
+\newcommand{\TITLE}{Title}
+
+\date{}
+\title{
+{CMPSC 190N\\ Classifying Video Content as Gaming or Music using Networking insight}}
+\author{
+{Yulin Lin Côme Bonal}
+}
+
+%%%%%%%%%%%%%%%%%%%%  START OF DOCUMENT  %%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+%\AcmCopyright
+%\ToAppear
+
+\begin{sloppypar}
+
+\input{abstract}
+
+
+
+
+
+\input{introduction}
+\input{background}
+\input{design}
+\input{implementation}
+\input{evaluation}
+% \input{related}
+%\balance
+\input{conclusion}
+\label{lastpage}
+
+\end{sloppypar}
+
+\vspace{-0.01in}
+%\section*{Acknowledgments}
+% Comments for people we need to acknowledge in the final version.
+% \noindent \textbf{Acknowledgments.}
+% TBD
+\pagebreak
+\small
+%\setlength{\bibsep}{0pt}
+\setlength{\parskip}{-1pt}
+\setlength{\itemsep}{-1pt}
+% \footnotesize % SPACE
+\balance
+\bibliography{paper, writing/refs}
+\bibliographystyle{acm}
+%\bibliographystyle{abbrvnat_noaddr} % SPACE
+%\theendnotes % ENDNOTES
+
+{% onlyAbstract
+}
+
+%\pagebreak
+%\input{appendix}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%  END OF DOCUMENT  %%%%%%%%%%%%%%%%%%%%

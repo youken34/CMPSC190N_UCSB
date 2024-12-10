@@ -1,0 +1,50 @@
+\section{Design/Approach/Methodology} 
+Here, you want to ensure that your approach/system design is completely described in sufficient detail for the reader to potentially replicate the work. Make sure you motivate all the key ``design decisions'' with logic, data, or experiments.
+
+\begin{algorithm}[t]
+\label{algo:tom}
+\caption{Sample Algorithm~\cite{sonata}}
+\SetKwData{t}{t}
+\SetKwData{Empty}{empty}
+\SetKwData{Input}{Input}
+\SetKwData{Is}{is}\SetKwData{to}{t'}
+\SetKwData{E}{$E$}
+\SetKwData{In}{in}
+\SetKwData{Break}{break}
+\SetKwFunction{Extend}{extend}
+\SetKwFunction{GRP}{get-refinement-plan}
+\SetKwFunction{TOM}{get-tom}
+\SetKwFunction{Load}{get-load}
+\SetKwFunction{SQ}{sample-queries}
+\SetKwFunction{PP}{popular-plans}
+\Input: $Q$, $D$\;
+$l_{min} \gets \infty$\;
+\For{$Th$ $\in [0,M]$}{
+$p \gets $ \GRP{$Q$, $Th$, $D$}\;
+$l \gets $ \Load{$p$, $D$}\;
+% $t \gets $ \TOM{$p$, $D$}\;
+% $l \gets 0$; $t \gets 0$\;
+% $p \gets $ \GRP{Q', Th, D}\;
+% \For{$D_i$ \In D}{
+% $t$ $+=$ \TOM{$p$, $D_i$}\;
+% $l$ $+=$ \Load{$p$, $D_i$, $\beta$}\;
+% }
+% $l \gets \frac{l}{|D|}$; $t \gets \frac{t}{|D|}$\;
+% \IF{$l$ $\geq$ $l_{min}$}
+% {
+% \Empty;
+% }
+
+% \If{$t \leq \alpha.M$ }
+
+\If{$l \leq l_{min}$ }
+{
+$l_{min} \gets l$; $p_{min} \gets p$\;
+}
+% \Else{
+% \Break\;
+% }
+}
+\Return $p_{min}$, $l_{min}$
+
+\end{algorithm}

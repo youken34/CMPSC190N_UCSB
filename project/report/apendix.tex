@@ -1,0 +1,16 @@
+\appendix
+
+
+\section{XX Algorithm}
+
+\begin{algorithm}
+ \KwData{a list of supersets $\{s_1, s_2, \dots, s_N\}$}
+ \KwResult{a list of supersets with maximally decreased rule inflation }
+let $A =$ the set of feasible merges\;
+\While{A is nonempty}{
+  read current\;
+  choose merge action $(s_i, s_j) = a \in A$ with greatest benefit\;
+  merge sets $s_i$ and $s_j$\;
+  update $A$\;
+ }
+\end{algorithm}
