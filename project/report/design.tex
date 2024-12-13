@@ -18,14 +18,19 @@ Here, you want to ensure that your approach/system design is completely describe
     \item \hl{\textbf{Traffic Management:} The pipeline is designed to manage resource limits well so that the data collection processes work well without over-overloading the system.}
 \end{itemize}
 
-\hl{Feature Engineering}
+
 \hl{The following features come from the packet traces and are used as input for our machine learning models,They provide important information on the unique traffic patterns of gaming and music videos, which helps us classify them accurately :}
 \begin{itemize}
     \item \hl{\textbf{Packet Size:} Measures the size of each packet transmitted.}
-    \item \hl{\textbf{Latency:} Calculates the round-trip time, if applicable.}
+    \item \hl{\textbf{Packet Frequency:} Tracks how often packets are sent during the transmission.}
     \item \hl{\textbf{Data Spikes:} Observes fluctuations in upload/download rates.}
 \end{itemize}
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\linewidth]{timeline_diagram.png}
+    \label{fig:your_label}
+\end{figure}
 
 
 \hl{Regarding our Machine Learning model, we use a Random Forest model for our classification task. This algorithm processes the input data (that we have previously stored in our .csv files) through an ensemble of decision trees, where each tree and sub-tree analyze and compare different given features, contributing to the final prediction. By combining the outputs of multiple trees, the model generates classifications based on the patterns it has learned during training.

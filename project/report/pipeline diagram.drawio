@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="24.7.5">
+  <diagram name="Page-1" id="OUasruyUljDr4-M1toHJ">
+    <mxGraphModel dx="2289" dy="1191" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-3" value="UCSB Server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="304" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-6" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Project Timeline&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="274" y="70" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-11" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Traffic capture&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="240.00000000000003" width="100" height="47.05" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#CC6600;entryX=0.964;entryY=0.327;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="dakkY7zSZCOYO1kJTX3F-3" target="dakkY7zSZCOYO1kJTX3F-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="340" as="sourcePoint" />
+            <mxPoint x="460" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.091;entryY=0.999;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryPerimeter=0;strokeColor=#CC6600;" edge="1" parent="1" source="dakkY7zSZCOYO1kJTX3F-11" target="dakkY7zSZCOYO1kJTX3F-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="340" as="sourcePoint" />
+            <mxPoint x="410" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-4" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.youtube;fillColor=#FF2626;gradientColor=#B5171F" vertex="1" parent="1">
+          <mxGeometry x="410" y="180" width="80.56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-15" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#CC6600;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.file_system;" vertex="1" parent="1">
+          <mxGeometry x="260" y="190" width="53.42" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-17" value="&lt;font color=&quot;#cc6600&quot;&gt;Pcap Files&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CC6600;" vertex="1" parent="1">
+          <mxGeometry x="324" y="200" width="66" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-20" value="&lt;span style=&quot;color: rgb(204, 102, 0); font-size: 28px;&quot;&gt;1)&amp;nbsp;&lt;/span&gt;&lt;font color=&quot;#cc6600&quot;&gt;&lt;span style=&quot;font-size: 28px;&quot;&gt;Traffic Capture&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="190" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-21" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#FF3333;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="dakkY7zSZCOYO1kJTX3F-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="404" y="140" as="sourcePoint" />
+            <mxPoint x="390" y="480" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="550" y="140" />
+              <mxPoint x="550" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-22" value="&lt;span style=&quot;font-family: Helvetica; font-size: 28px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;2)&amp;nbsp; &amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;font color=&quot;#ff3333&quot;&gt;&lt;span style=&quot;font-size: 28px; text-wrap-mode: nowrap;&quot;&gt;Feature Extraction&lt;/span&gt;&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="260" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-23" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#FF3333;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.file_system;" vertex="1" parent="1">
+          <mxGeometry x="456.5799999999999" y="360" width="53.42" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-24" value="&lt;font color=&quot;#ff3333&quot;&gt;Pcap Files&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FF3333;" vertex="1" parent="1">
+          <mxGeometry x="519" y="370" width="66" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-26" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#FF3333;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.services.excel_services;" vertex="1" parent="1">
+          <mxGeometry x="253.42000000000002" y="455.5" width="60" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-27" value="&lt;font color=&quot;#ff3333&quot;&gt;.csv Files&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FF3333;" vertex="1" parent="1">
+          <mxGeometry x="321" y="460" width="66" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-29" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#007FFF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dakkY7zSZCOYO1kJTX3F-27" target="dakkY7zSZCOYO1kJTX3F-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="500" as="sourcePoint" />
+            <mxPoint x="354" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-31" value="&lt;span style=&quot;font-family: Helvetica; font-size: 28px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font color=&quot;#007fff&quot;&gt;3) Machine learning model training&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="434" y="590" width="444.72" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-33" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Converting files&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490.55999999999995" y="452.95000000000005" width="100" height="47.05" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-36" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/ai_machine_learning/Batch_AI.svg;" vertex="1" parent="1">
+          <mxGeometry x="250" y="590" width="35.29" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-37" value="&lt;font color=&quot;#007fff&quot;&gt;Result analysis&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#007FFF;" vertex="1" parent="1">
+          <mxGeometry x="300.75" y="780" width="112.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dakkY7zSZCOYO1kJTX3F-38" value="Classification&lt;div&gt;with ML model&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="590" width="110" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
