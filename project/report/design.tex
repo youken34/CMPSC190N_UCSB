@@ -9,9 +9,9 @@ This section describes the methodology we employed from scratch to overcome the 
 \vspace{2mm}
 
 
-The implemented pipeline works as follows :
+The implemented pipeline worked as follows :
 \begin{itemize}
-    \item \textbf{Data Collection:} The first step in our methodology involves capturing network traffic data directly from Youtube, we aim to collect traffic traces from both gaming and music video. In order to do so, and to ensure sufficient diversity within our dataset, we collected approximately 2000 seconds of data by recording 18 videos for training and 2 videos for testing, each with 100 seconds of traffic data. This process resulted in around 15,000 rows of data for analysis.
+    \item \textbf{Data Collection:} The first step in our methodology involves capturing network traffic data directly from Youtube, we aimed to collect traffic traces from both gaming and music videos. In order to do so, and to ensure sufficient diversity within our dataset, we collected approximately 2000 seconds of data by recording 18 videos for training and 2 videos for testing, each with 100 seconds of traffic data. This process resulted in around 15,000 rows of data for analysis.
     \item \textbf{Traffic Capture:} We log raw network traffic into two\texttt{.pcap} files respectively for the two categories we are trying to distinguish, as the pipeline is streaming the videos. This captures essential data such as packet size and frequency or any other data that would be useful to help our model labeling videos.
     \item \textbf{Feature Extraction:} Once the \texttt{.pcap} files are generated, they are converted into \texttt{.csv} files.
     \item \textbf{Data Upload:} After feature extraction and conversion, we upload the resulting files to a designated server for storage and analysis. This ensures all processed data is centrally accessible for model training.

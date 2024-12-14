@@ -32,7 +32,7 @@ Analyze feature importance from the Random Forest model\;
 \end{algorithm}
 
 \subsection{Data Collection and Traffic Capture}
-The first step in our implementation involves capturing network traffic data directly from YouTube. We implemented a pipeline using the \texttt{StartCapture} and \texttt{StopNamedCapture} tasks to log raw network traffic into \texttt{.pcap} files while streaming videos. For each category (gaming and music videos), we processed 18 videos for training and 2 videos for testing, each capturing 100 seconds of data.
+The first step in our implementation involved capturing network traffic data directly from YouTube. We implemented a pipeline using the \texttt{StartCapture} and \texttt{StopNamedCapture} tasks to log raw network traffic into \texttt{.pcap} files while streaming videos. For each category (gaming and music videos), we processed 18 videos for training and 2 videos for testing, each capturing 100 seconds of data.
 
 To optimize system resources and prevent overload, we introduced a \texttt{SleepTask} between iterations, allowing the system to stabilize. Additionally, we used the \texttt{UploadToWebDav} task to upload captured \texttt{.pcap} files to the central Unicorn server for storage and subsequent analysis.
 
@@ -83,7 +83,7 @@ Throughout the implementation, several challenges we encountered several challen
     \item \textbf{Path Issues:} Automating file handling during the \texttt{.pcap} to \texttt{.csv} conversion resolved errors related to incorrect file paths.
     \item \textbf{Data Imbalance:} Using SMOTE ensured balanced training data, reducing bias in the classification model.
     \item \textbf{Noise in Traffic Data:} Isolating YouTube streams and cleaning the dataset minimized unrelated traffic.
-    \item \textbf{Hyperparameter Tuning:} Adjusting hyperparameters and improving feature engineering helped improve classification accuracy and reduce overfitting.
+    \item \textbf{Hyperparameter Tuning:} Adjusting hyperparameters helped improve classification accuracy and reduce overfitting.
     \item \textbf{Data Quality Issues:} Removing blank data and refining derived features such as \texttt{Spike Difference} enhanced the consistency of the dataset.
 \end{itemize}
 
