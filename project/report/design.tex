@@ -1,29 +1,29 @@
 \section{Design/Approach/Methodology} 
-Here, you want to ensure that your approach/system design is completely described in sufficient detail for the reader to potentially replicate the work. Make sure you motivate all the key ``design decisions'' with logic, data, or experiments.
+
 
 
 \label{sec:design}
 
-\hl{This section describes the methodology employed from scratch to overcome the challenges in distinguishing between gaming and music video traffic on YouTube. We designed an approach that incorporates data collection, feature extraction, and model training to achieve accurate and adaptive classification.}
+This section describes the methodology we employed from scratch to overcome the challenges in distinguishing between gaming and music video traffic on YouTube. We designed an approach that incorporates data collection, feature extraction, and model training to achieve accurate and adaptive classification.
 
 \vspace{2mm}
 
 
-\hl{The implemented pipeline works as follows :}
+The implemented pipeline works as follows :
 \begin{itemize}
-    \item \hl{\textbf{Data Collection:} The first step in our methodology involves capturing network traffic data directly from Youtube, we aim to collect traffic traces from both gaming and music video. In order to do so, and to ensure sufficient diversity within our dataset, we collected approximately 2000 seconds of data by recording 18 videos for training and 2 videos for testing, each with 100 seconds of traffic data. This process resulted in around 15,000 rows of data for analysis.}
-    \item \hl{\textbf{Traffic Capture:} We log raw network traffic into two\texttt{.pcap} files respectively for the two categories we are trying to distinguish, as the pipeline is streaming the videos. This captures essential data such as packet size and frequency or any other data that would be useful to help our model labeling videos.}
-    \item \hl{\textbf{Feature Extraction:} Once the \texttt{.pcap} files are generated, they are converted into \texttt{.csv} files.}
-    \item \hl{\textbf{Data Upload:} After feature extraction and conversion, we upload the resulting files to a designated server for storage and analysis. This ensures all processed data is centrally accessible for model training.}
-    \item \hl{\textbf{Traffic Management:} The pipeline is designed to manage resource limits well so that the data collection processes work well without over-overloading the system.}
+    \item \textbf{Data Collection:} The first step in our methodology involves capturing network traffic data directly from Youtube, we aim to collect traffic traces from both gaming and music video. In order to do so, and to ensure sufficient diversity within our dataset, we collected approximately 2000 seconds of data by recording 18 videos for training and 2 videos for testing, each with 100 seconds of traffic data. This process resulted in around 15,000 rows of data for analysis.
+    \item \textbf{Traffic Capture:} We log raw network traffic into two\texttt{.pcap} files respectively for the two categories we are trying to distinguish, as the pipeline is streaming the videos. This captures essential data such as packet size and frequency or any other data that would be useful to help our model labeling videos.
+    \item \textbf{Feature Extraction:} Once the \texttt{.pcap} files are generated, they are converted into \texttt{.csv} files.
+    \item \textbf{Data Upload:} After feature extraction and conversion, we upload the resulting files to a designated server for storage and analysis. This ensures all processed data is centrally accessible for model training.
+    \item \textbf{Traffic Management:} The pipeline is designed to manage resource limits well so that the data collection processes work well without over-overloading the system.
 \end{itemize}
 
 
-\hl{The following features come from the packet traces and are used as input for our machine learning models,They provide important information on the unique traffic patterns of gaming and music videos, which helps us classify them accurately :}
+The following features come from the packet traces and are used as input for our machine learning models,They provide important information on the unique traffic patterns of gaming and music videos, which helps us classify them accurately :
 \begin{itemize}
-    \item \hl{\textbf{Packet Size:} Measures the size of each packet transmitted.}
-    \item \hl{\textbf{Packet Frequency:} Tracks how often packets are sent during the transmission.}
-    \item \hl{\textbf{Data Spikes:} Observes fluctuations in upload/download rates.}
+    \item \textbf{Packet Size:} Measures the size of each packet transmitted.
+    \item \textbf{Packet Frequency:} Tracks how often packets are sent during the transmission.
+    \item \textbf{Data Spikes:} Observes fluctuations in upload/download rates.
 \end{itemize}
 
 \begin{figure}[ht]
@@ -33,65 +33,18 @@ Here, you want to ensure that your approach/system design is completely describe
 \end{figure}
 
 
-\hl{Regarding our Machine Learning model, we use a Random Forest model for our classification task. This algorithm processes the input data (that we have previously stored in our .csv files) through an ensemble of decision trees, where each tree and sub-tree analyze and compare different given features, contributing to the final prediction. By combining the outputs of multiple trees, the model generates classifications based on the patterns it has learned during training.
-}
+Regarding our Machine Learning model, we use a Random Forest model for our classification task. This algorithm processes the input data (that we have previously stored in our .csv files) through an ensemble of decision trees, where each tree and sub-tree analyze and compare different given features, contributing to the final prediction. By combining the outputs of multiple trees, the model generates classifications based on the patterns it has learned during training.
+
 \vspace{2mm}
 
-{\hl{The design of our methodology is guided by the following principles:}
+The design of our methodology is guided by the following principles:
 \begin{itemize}
-    \item \hl{\textbf{Custom Dataset:} By focusing on YouTube traffic and manually selecting videos, we ensure the dataset align with the targeted problem.}
-    \item \hl{\textbf{Feature Relevance:} The selected features capture the nuances of gaming and music video traffic.}
-    \item \hl{\textbf{Small-Scale Feasibility:} The amount of readily available content on YouTube  makes this project achievable while sticking with a small-scale framework.}
-    \item \hl{\textbf{Use of Machine Learning:} Machine learning techniques allow us to overcome the challenges posed by traditional classification approaches and provide flexible solutions for evolving applications.}
+    \item \textbf{Custom Dataset:} By focusing on YouTube traffic and manually selecting videos, we ensure the dataset align with the targeted problem.
+    \item \textbf{Feature Relevance:} The selected features capture the nuances of gaming and music video traffic.
+    \item \textbf{Small-Scale Feasibility:} The amount of readily available content on YouTube  makes this project achievable while sticking with a small-scale framework.
+    \item \textbf{Use of Machine Learning:} Machine learning techniques allow us to overcome the challenges posed by traditional classification approaches and provide flexible solutions for evolving applications.
 \end{itemize}
 
-\hl{This approach provides a strong starting point for and gives us the opportunity to explore and improve further the network traffic classification.}
+This approach provides a strong starting point for and gives us the opportunity to explore and improve further the network traffic classification.
 
 
-\begin{algorithm}[t]
-\label{algo:tom}
-\caption{Sample Algorithm~\cite{sonata}}
-\SetKwData{t}{t}
-\SetKwData{Empty}{empty}
-\SetKwData{Input}{Input}
-\SetKwData{Is}{is}\SetKwData{to}{t'}
-\SetKwData{E}{$E$}
-\SetKwData{In}{in}
-\SetKwData{Break}{break}
-\SetKwFunction{Extend}{extend}
-\SetKwFunction{GRP}{get-refinement-plan}
-\SetKwFunction{TOM}{get-tom}
-\SetKwFunction{Load}{get-load}
-\SetKwFunction{SQ}{sample-queries}
-\SetKwFunction{PP}{popular-plans}
-\Input: $Q$, $D$\;
-$l_{min} \gets \infty$\;
-\For{$Th$ $\in [0,M]$}{
-$p \gets $ \GRP{$Q$, $Th$, $D$}\;
-$l \gets $ \Load{$p$, $D$}\;
-% $t \gets $ \TOM{$p$, $D$}\;
-% $l \gets 0$; $t \gets 0$\;
-% $p \gets $ \GRP{Q', Th, D}\;
-% \For{$D_i$ \In D}{
-% $t$ $+=$ \TOM{$p$, $D_i$}\;
-% $l$ $+=$ \Load{$p$, $D_i$, $\beta$}\;
-% }
-% $l \gets \frac{l}{|D|}$; $t \gets \frac{t}{|D|}$\;
-% \IF{$l$ $\geq$ $l_{min}$}
-% {
-% \Empty;
-% }
-
-% \If{$t \leq \alpha.M$ }
-
-\If{$l \leq l_{min}$ }
-{
-$l_{min} \gets l$; $p_{min} \gets p$\;
-}
-% \Else{
-% \Break\;
-% }
-}
-\Return $p_{min}$, $l_{min}$
-
-\end{algorithm}
